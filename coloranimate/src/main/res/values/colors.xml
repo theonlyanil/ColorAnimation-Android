@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#d7d7d7</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- material colors -->
+    <color name="red">#F44336</color>
+    <color name="pink">#E91E63</color>
+    <color name="purple">#9C27B0</color>
+    <color name="deep_purple">#673AB7</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="blue">#2196F3</color>
+    <color name="light_blue">#039BE5</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="teal">#009688</color>
+    <color name="green">#4CAF50</color>
+    <color name="light_green">#8BC34A</color>
+    <color name="lime">#CDDC39</color>
+    <color name="yellow">#FDD835</color>
+    <color name="amber">#FFA000</color>
+    <color name="orange">#EF6C00</color>
+    <color name="deep_orange">#FF5722</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_brown">#8D6E63</color>
+    <color name="brown">#795548</color>
+    <color name="deep_green">#2E7D32</color>
+    <color name="black">#000000</color>
+    <color name="blue_gray">#78909C</color>
+
+    <!-- material colors transparent -->
+    <color name="whitet">#51FFFFFF</color>
+    <color name="light_brownt">#518D6E63</color>
+    <color name="brownt">#51795548</color>
+    <color name="greent">#514CAF50</color>
+    <color name="cyant">#5100BCD4</color>
+    <color name="purplet">#519C27B0</color>
+    <color name="deep_greent">#512E7D32</color>
+    <color name="deep_purplet">#51673AB7</color>
+    <color name="redt">#51C62828</color>
+    <color name="bluet">#511E88E5</color>
+    <color name="oranget">#51E65100</color>
+    <color name="pinkt">#51E91E63</color>
+    <color name="tealt">#51009688</color>
+    <color name="blackt">#32000000</color>
+    <color name="yellowt">#51FBC02D</color>
+    <color name="blue_grayt">#5178909C</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="book_loading_background">#00ffffff</color>
+    <color name="book_loading_book">@color/blue_gray</color>
+    <color name="book_loading_page">@color/blue_grayt</color>
+</resources>
