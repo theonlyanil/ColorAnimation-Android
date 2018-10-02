@@ -10,7 +10,7 @@ public class ColorAnimation
 {
     public static int pos = 0;
 
-    public static void rgb(final View view, int time)
+    public static void rgb(final View view, final int time)
     {
         // It's ON
         final Handler handler = new Handler();
@@ -19,7 +19,6 @@ public class ColorAnimation
             public void run() {
                 int colorFrom = ((ColorDrawable) view.getBackground()).getColor();
                 int colorTo = RGB.returningColor();
-                int time = 6000; //4000;
 
                 animate(colorFrom, colorTo, view, time);
                 handler.postDelayed(this, time / 4);
