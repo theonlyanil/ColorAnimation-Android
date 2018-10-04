@@ -15,7 +15,7 @@ public class ColorAnimation
     @SuppressLint("StaticFieldLeak")
     private static Context context;
 
-    public static void rgb(final View view, final int time, Context context)
+    public static void rgb(Context context, final View view, final int time)
     {
         ColorAnimation.context = context;
         final Handler handler = new Handler();
