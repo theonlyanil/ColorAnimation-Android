@@ -61,7 +61,7 @@ public class ColorAnimation
         colorAnimation.start();
     }
 
-    public static class RGB
+    private static class RGB
     {
         // Continuous Color change - Action bar / Toolbar
         public static int returningColor()

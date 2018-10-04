@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import anil.sardiwal.coloranimate.ColorAnimation;
-
 public class MainActivity extends AppCompatActivity {
 
     public static int pos = 0;
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         relativeLayout = findViewById(R.id.relativelayout);
 
-        ColorAnimation.rgb(relativeLayout, 2000, this);
+
         //ColorAnimation(relativeLayout);
     }
 
