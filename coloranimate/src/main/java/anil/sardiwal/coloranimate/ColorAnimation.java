@@ -2,6 +2,7 @@ package anil.sardiwal.coloranimate;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
@@ -10,8 +11,9 @@ import android.view.View;
 
 public class ColorAnimation
 {
-    public static int pos = 0;
-    public static Context context;
+    private static int pos = 0;
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
 
     public static void rgb(final View view, final int time, Context context)
     {
