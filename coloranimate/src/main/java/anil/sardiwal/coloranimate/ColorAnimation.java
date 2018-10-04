@@ -6,12 +6,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 
 public class ColorAnimation
 {
     public static int pos = 0;
 
-    public static void rgb(final View view, final int time)
+    public static void rgb(final ViewGroup view, final int time)
     {
         // It's ON
         final Handler handler = new Handler();
