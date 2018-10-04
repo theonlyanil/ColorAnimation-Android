@@ -6,14 +6,13 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
 
 public class ColorAnimation
 {
     public static int pos = 0;
     public static Context context;
 
-    public static void rgb(final ViewGroup view, final int time, Context context)
+    public static void rgb(final View view, final int time, Context context)
     {
         ColorAnimation.context = context;
         final Handler handler = new Handler();
@@ -34,7 +33,7 @@ public class ColorAnimation
         handler.postDelayed(runnable, 100);
     }
 
-    public static void colorAnimation(int colorFrom, int colorTo, final View view, int animDuration)
+    private static void colorAnimation(int colorFrom, int colorTo, final View view, int animDuration)
     {
         ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
         colorAnimation.setDuration(animDuration); // milliseconds
