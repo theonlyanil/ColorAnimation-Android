@@ -40,8 +40,6 @@ public class RGB
                         (R.color.purple),
                         (R.color.pink),
                         (R.color.red)
-
-
                 };
 
 

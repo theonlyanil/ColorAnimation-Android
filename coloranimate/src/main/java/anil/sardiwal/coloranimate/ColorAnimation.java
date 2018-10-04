@@ -12,10 +12,9 @@ public class ColorAnimation
 {
     public static int pos = 0;
 
-    public static void rgb(final ViewGroup view, final int time)
+    public static void rgb(final Handler handler, final ViewGroup view, final int time)
     {
         // It's ON
-        final Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
