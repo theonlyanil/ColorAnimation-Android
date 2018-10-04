@@ -5,6 +5,7 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 
 public class ColorAnimation
@@ -21,12 +22,19 @@ public class ColorAnimation
         runnable = new Runnable() {
             @Override
             public void run() {
-                int colorFrom = ((ColorDrawable) view.getBackground()).getColor();
-                int colorTo = RGB.returningColor();
-                int time = 2000; //4000;
+                try {
 
-                colorAnimation(colorFrom, colorTo, view, time);
-                handler.postDelayed(this, time/4);
+                    int colorFrom = ((ColorDrawable) view.getBackground()).getColor();
+                    int colorTo = RGB.returningColor();
+                    int time = 2000; //4000;
+
+                    colorAnimation(colorFrom, colorTo, view, time);
+                    handler.postDelayed(this, time/4);
+                }
+                catch (Exception e)
+                {
+                    Log.e("ColorAnimation.Anil", e.getLocalizedMessage());
+                }
             }
         };
 
