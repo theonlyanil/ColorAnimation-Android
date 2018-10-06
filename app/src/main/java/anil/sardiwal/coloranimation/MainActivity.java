@@ -8,18 +8,14 @@ import anil.sardiwal.coloranimate.ColorAnimation;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static int pos = 0;
-    private RelativeLayout relativeLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        relativeLayout = findViewById(R.id.relativelayout);
+        RelativeLayout relativeLayout = findViewById(R.id.relativelayout);
 
-
-        //ColorAnimation.rgb(this, relativeLayout, 40000);
-        ColorAnimation.colour(this, relativeLayout, 8000, R.color.colorPrimary);
+        ColorAnimation.rgb(this, relativeLayout, 2000);
+        //ColorAnimation.colorRes(this, relativeLayout, 2000, R.color.colorAccent);
     }
 
 }
