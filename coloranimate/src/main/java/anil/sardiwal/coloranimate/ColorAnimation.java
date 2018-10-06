@@ -28,14 +28,40 @@ public class ColorAnimation
 
                     int colorFrom = ((ColorDrawable) view.getBackground()).getColor();
                     int colorTo = RGB.returningColor();
-                    int time = 2000; //4000;
 
                     colorAnimation(colorFrom, colorTo, view, time);
                     handler.postDelayed(this, time/4);
                 }
                 catch (Exception e)
                 {
-                    Log.e("ColorAnimation.Anil", e.getLocalizedMessage());
+                    Log.e("ColorAnimation.rgb", e.getLocalizedMessage());
+                }
+            }
+        };
+
+        handler.postDelayed(runnable, 100);
+    }
+
+    public static void colour(final Context context, final View view, final int time, final int colour)
+    {
+        ColorAnimation.context = context;
+        final Handler handler = new Handler();
+        Runnable runnable;
+        // It's ON
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+
+                    int colorFrom = ((ColorDrawable) view.getBackground()).getColor();
+                    int colorTo = context.getResources().getColor(colour);
+
+                    colorAnimation(colorFrom, colorTo, view, time);
+                    handler.postDelayed(this, time/4);
+                }
+                catch (Exception e)
+                {
+                    Log.e("ColorAnimation.color", e.getLocalizedMessage());
                 }
             }
         };
