@@ -14,12 +14,19 @@ public class ColorAnimation
     private static int pos = 0;
     @SuppressLint("StaticFieldLeak")
     private static Context context;
+    private static ValueAnimator colorAnimation;
+    private static Handler handler;
+    private static Runnable runnable;
 
-    public static void rgb(Context context, final View view, final int time)
+    public static void stop()
     {
-        ColorAnimation.context = context;
-        final Handler handler = new Handler();
-        Runnable runnable;
+        handler.removeCallbacks(runnable);
+    }
+
+    public static void rgb(final View view, final int time)
+    {
+        ColorAnimation.context = view.getContext();
+        handler = new Handler();
         // It's ON
         runnable = new Runnable() {
             @Override
@@ -39,7 +46,7 @@ public class ColorAnimation
             }
         };
 
-        handler.postDelayed(runnable, 100);
+        handler.post(runnable);
     }
 
     public static void colour(final Context context, final View view, final int time, final int colour)
@@ -66,12 +73,12 @@ public class ColorAnimation
             }
         };
 
-        handler.postDelayed(runnable, 100);
+        handler.post(runnable);
     }
 
     private static void colorAnimation(int colorFrom, int colorTo, final View view, int animDuration)
     {
-        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+        colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
         colorAnimation.setDuration(animDuration); // milliseconds
         colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 
