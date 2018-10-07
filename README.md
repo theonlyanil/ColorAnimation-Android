@@ -27,7 +27,7 @@ Gradle(app-level):
 
 ```gradle
 dependencies {
-  implementation 'com.github.theonlyanil:ColorAnimation:0.2.3'
+  implementation 'com.github.theonlyanil:ColorAnimation:0.2.4'
 }
 ```
 
@@ -43,10 +43,15 @@ Usage
   ColorAnimation.colour(this, relativeLayout, 4000, R.color.colorAccent);
 ```
 
-1. Infinite color animation (RGB)
+2. Infinite color animation (RGB)
 ```java
   // Format: ColorAnimation.rgb(Context, ViewGroup, Time(in millis));
   ColorAnimation.rgb(this, relativeLayout, 4000);
+```
+
+3. Stop the animation
+```java
+  ColorAnimation.stop();
 ```
 
 Author
