@@ -53,9 +53,9 @@ public class ColorAnimation
         handler.post(runnable);
     }
 
-    public static void colour(final Context context, final View view, final int time, final int colour)
+    public static void colour(final View view, final int time, final int colour)
     {
-        ColorAnimation.context = context;
+        ColorAnimation.context = view.getContext();
         final Handler handler = new Handler();
         Runnable runnable;
         // It's ON
